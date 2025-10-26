@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Tracker!!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🏠 My Daily Progress House</h1>
+    <p>Complete tasks to build your house floor by floor!</p>
+  </header>
+
+  <div class="main-container">
+
+    <!-- Left: Task Section -->
+    <div class="task-section-wrapper">
+      <div class="task-section">
+        <input type="text" id="taskInput" placeholder="Enter the tasks of your day">
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <div class="task-list">
+        <h3>Today's Tasks</h3>
+        <ul id="taskList"></ul>
+      </div>
+
+      <div id="aiMessage" class="ai-message">
+        🌱 Start building your house by completing a task!
+      </div>
+    </div>
+
+    <!-- Right: House Area -->
+    <div class="house-section">
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- House Floors -->
+      <div class="house-area">
+        <div id="house"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("HD-wallpaper-anime-landscape-building-sunset-clouds-scenic-anime.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 20px;
+}
+header h1 {
+  font-size: 2.5em;
+  color: #ffe066;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+header p {
+  font-size: 1.2em;
+  color: #f7f1f1;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.task-section-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#taskInput {
+  flex: 1;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+}
+button {
+  padding: 12px 18px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.task-list {
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 12px;
+}
+.task-list h3 {
+  color: #ffd369;
+  margin-bottom: 10px;
+}
+.task-list ul {
+  list-style: none;
+}
+.task-list li {
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.ai-message {
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1em;
+  font-style: italic;
+  min-height: 45px;
+}
+
+.house-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-container {
+  width: 80%;
+  height: 20px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #13d619;
+  transition: width 0.5s ease;
+  border-radius: 12px;
+}
+
+.house-area {
+  width: 70%;          
+  max-width: 500px;    
+  height: 600px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;  
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  padding: 5px 0;       
+  overflow-y: auto;
+}
+
+
+.floor {
+  width: 95%;          
+  height: 70px;         
+  margin: 5px auto;     
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 20px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+  cursor: pointer;
+  animation: fall 0.5s ease forwards;
+}
+
+.window {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 4px;
+  border: 2px solid #333;
+  margin-top: 25px;
+  animation: blink 1.5s infinite;
+}
+
+.floor:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.7);
+  transition: 0.3s;
+}
+
+/* Animations */
+@keyframes fall {
+  from { transform: translateY(-120px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes blink {
+  0%, 50%, 100% { background: #fff; }
+  25%, 75% { background: #ffe066; }
+}
